@@ -8,8 +8,24 @@ let sweetMain = document.querySelectorAll('.sweet_main div')
 let guestContainerOut =document.querySelector('.guest_container_out h1')
 let guestContainerOutP =document.querySelector('.guest_container_out p')
 let footer = document.querySelector('footer')
+let zeroContainerImg = document.querySelector('.zero_container img')
+// let sweetMainImg = document.querySelectorAll('.sweet_main img')
 let flag = true;
 let snowNumber = 100;
+let index = 0
+let array = ['../image/Foto2.jpg', '../image/Foto7.jpg', '../image/header.jpg', '../image/Strawberry.jpg', '../image/Chiristmas.jpg']
+setInterval( function (){
+    zeroContainerImg.src= array[index]
+    index=(index+1) % array.length
+} , 1500)
+// let indexOf=0;
+// let arrayTwo = ['../image/Chocolate.jpg', '../image/Chocolate2.jpg', '../image/Foto3.jpg']
+// sweetMainImg.forEach(item =>{
+//     setInterval( function (){
+//         item.src = arrayTwo[indexOf]
+//         indexOf=(indexOf+1) % arrayTwo.length
+//     } , 1500)
+// })
 
 function createSnow(){
     let div= document.createElement('div')
